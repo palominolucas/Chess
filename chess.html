@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./chess.css">
+    <script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./js/tablero.js"></script>
+    <title>Ajedrez de Lucas Palomino</title>
+</head>
+
+<body>
+
+    <div>
+    <table id="tablero" width="400" height="400">
+        <tr>
+            <td class="casillero negro" id="a8"></td>
+            <td class="casillero blanco" id="b8"></td>
+            <td class="casillero negro" id="c8"></td>
+            <td class="casillero blanco" id="d8"></td>
+            <td class="casillero negro" id="e8"></td>
+            <td class="casillero blanco" id="f8"></td>
+            <td class="casillero negro" id="g8"></td>
+            <td class="casillero blanco" id="h8"></td>
+        </tr>
+        <tr>
+            <td class="casillero blanco" id="a7"></td>
+            <td class="casillero negro" id="b7"></td>
+            <td class="casillero blanco" id="c7"></td>
+            <td class="casillero negro" id="d7"></td>
+            <td class="casillero blanco" id="e7"></td>
+            <td class="casillero negro" id="f7"></td>
+            <td class="casillero blanco" id="g7"></td>
+            <td class="casillero negro" id="h7"></td>
+        </tr>
+        <tr>
+            <td class="casillero negro" id="a6"></td>
+            <td class="casillero blanco" id="b6"></td>
+            <td class="casillero negro" id="c6"></td>
+            <td class="casillero blanco" id="d6"></td>
+            <td class="casillero negro" id="e6"></td>
+            <td class="casillero blanco" id="f6"></td>
+            <td class="casillero negro" id="g6"></td>
+            <td class="casillero blanco" id="h6"></td>
+        </tr>
+        <tr>
+            <td class="casillero blanco" id="a5"></td>
+            <td class="casillero negro" id="b5"></td>
+            <td class="casillero blanco" id="c5"></td>
+            <td class="casillero negro" id="d5"></td>
+            <td class="casillero blanco" id="e5"></td>
+            <td class="casillero negro" id="f5"></td>
+            <td class="casillero blanco" id="g5"></td>
+            <td class="casillero negro" id="h5"></td>
+        </tr>     
+        <tr>
+            <td class="casillero negro" id="a4"></td>
+            <td class="casillero blanco" id="b4"></td>
+            <td class="casillero negro" id="c4"></td>
+            <td class="casillero blanco" id="d4"></td>
+            <td class="casillero negro" id="e4"></td>
+            <td class="casillero blanco" id="f4"></td>
+            <td class="casillero negro" id="g4"></td>
+            <td class="casillero blanco" id="h4"></td>
+        </tr>
+        <tr>
+            <td class="casillero blanco" id="a3"></td>
+            <td class="casillero negro" id="b3"></td>
+            <td class="casillero blanco" id="c3"></td>
+            <td class="casillero negro" id="d3"></td>
+            <td class="casillero blanco" id="e3"></td>
+            <td class="casillero negro" id="f3"></td>
+            <td class="casillero blanco" id="g3"></td>
+            <td class="casillero negro" id="h3"></td>
+        </tr>        
+        <tr>
+            <td class="casillero negro" id="a2"></td>
+            <td class="casillero blanco" id="b2"></td>
+            <td class="casillero negro" id="c2"></td>
+            <td class="casillero blanco" id="d2"></td>
+            <td class="casillero negro" id="e2"></td>
+            <td class="casillero blanco" id="f2"></td>
+            <td class="casillero negro" id="g2"></td>
+            <td class="casillero blanco" id="h2"></td>
+        </tr>
+        <tr>
+            <td class="casillero blanco" id="a1"></td>
+            <td class="casillero negro" id="b1"></td>
+            <td class="casillero blanco" id="c1"></td>
+            <td class="casillero negro" id="d1"></td>
+            <td class="casillero blanco" id="e1"></td>
+            <td class="casillero negro" id="f1"></td>
+            <td class="casillero blanco" id="g1"></td>
+            <td class="casillero negro" id="h1"></td>
+        </tr>
+    </table>
+</div>
+
+<div class="pieza torre" id="torreB1">&#9814;</div>
+<div class="pieza torre" id="torreB2">&#9814;</div>
+<div class="pieza caballo" id="caballoB1">&#9816;</div>
+<div class="pieza caballo" id="caballoB2">&#9816;</div>
+<div class="pieza alfil" id="alfilB1">&#9815;</div>
+<div class="pieza alfil" id="alfilB2">&#9815;</div>
+<div class="pieza reina" id="reinaB">&#9813;</div>
+<div class="pieza rey" id="reyB">&#9812;</div>
+<div class="pieza peon" id="peonB1">&#9817;</div>
+<div class="pieza peon" id="peonB2">&#9817;</div>
+<div class="pieza peon" id="peonB3">&#9817;</div>
+<div class="pieza peon" id="peonB4">&#9817;</div>
+<div class="pieza peon" id="peonB5">&#9817;</div>
+<div class="pieza peon" id="peonB6">&#9817;</div>
+<div class="pieza peon" id="peonB7">&#9817;</div>
+<div class="pieza peon" id="peonB8">&#9817;</div>
+<div class="pieza torre" id="torreN1">&#9820;</div>
+<div class="pieza torre" id="torreN2">&#9820;</div>
+<div class="pieza caballo" id="caballoN1">&#9822;</div>
+<div class="pieza caballo" id="caballoN2">&#9822;</div>
+<div class="pieza alfil" id="alfilN1">&#9821;</div>
+<div class="pieza alfil" id="alfilN2">&#9821;</div>
+<div class="pieza reina" id="reinaN">&#9819;</div>
+<div class="pieza rey" id="reyN">&#9818;</div>
+<div class="pieza peon" id="peonN1">&#9823;</div>
+<div class="pieza peon" id="peonN2">&#9823;</div>
+<div class="pieza peon" id="peonN3">&#9823;</div>
+<div class="pieza peon" id="peonN4">&#9823;</div>
+<div class="pieza peon" id="peonN5">&#9823;</div>
+<div class="pieza peon" id="peonN6">&#9823;</div>
+<div class="pieza peon" id="peonN7">&#9823;</div>
+<div class="pieza peon" id="peonN8">&#9823;</div>
+<div>
+    <button type="submit" id="gamestartoo">¡¡Arrancá a jugaaa!!</button>
+</div>
+<div id="mouse"></div>
+</body>
+
+</html>
